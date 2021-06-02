@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fullpage-js/fullpage.min.css">
+  <script src="./fullpage-js/fullpage.min.js"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>Awesomejini Portfolio</header>
+  <div id="fullpage">
+    <div class="section s1">
+      <h1 style="color: #EE4E34;">Intro</h1>
+      <p style="color: #EE4E34;">안녕하세요, 프론트엔드 개발자를 꿈꾸는 지니입니다.</p>
+    </div>
+    <div class="section s2">
+      <h1 style="color: #FCEDDA;">About</h1>
+      <p style="color: #FCEDDA;">1990년생 말띠, 경기도 거주</p>
+    </div>
+    <div class="section s3">
+      <h1 style="color: #234E70;">Works</h1>
+      <p style="color: #234E70;">HTML / CSS / Vanilla JS + React.js + Vue.js 초급 / SCSS 초급 </p>
+    </div>
+    <div class="section s4">
+      <h1 style="color: #FFE67C;">Contact</h1>
+      <p style="color: #FFE67C;">제작중입니다</p>
+    </div>
+  </div>
+
+  <script>
+    new fullpage('#fullpage', {
+      //options here
+      licenseKey: '',
+      sectionsColor: ['#FCEDDA', '#EE4E34', '#FFE67C', '#234E70'],
+      navigation: true,
+      navigationTooltips: ['Intro', 'About Jini', 'Works', 'Contact'],
+      onLeave: function (origin, destination, direction) {
+        if (origin.index == 0 && direction == "down") {
+          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        }
+        if (origin.index == 1 && direction == "down") {
+          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        }
+        if (origin.index == 1 && direction == "up") {
+          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
+        }
+        if (origin.index == 2 && direction == "up") {
+          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        }
+        else if (origin.index == 2 && direction == "down") {
+          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+        }
+        if (origin.index == 3 && direction == "up") {
+          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+        }
+        else if (origin.index == 3 && direction == "down") {
+          $('header').css('color', '#FBF8BE').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
+        }
+      },
+      afterLoad: function (origin, destination, direction) {
+        if (origin.index == 0 && direction == "up") {
+          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
+        }
+        if (origin.index == 0 && direction == "down") {
+          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        }
+        if (origin.index == 1 && direction == "up") {
+          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
+        }
+        else if (origin.index == 1 && direction == "down") {
+          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+        }
+        if (origin.index == 2 && direction == "up") {
+          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        }
+        else if (origin.index == 2 && direction == "down") {
+          $('header').css('color', '#FBF8BE').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
+        }
+        if (origin.index == 3 && direction == "up") {
+          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
+          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+        }
+      },
+      scrollBar: true
+    });
+
+    $('html').bind('mousewheel DOMMouseScroll', function (e) {
+
+    });
+
+  </script>
+</body>
+
+</html>
