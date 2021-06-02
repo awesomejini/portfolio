@@ -15,23 +15,49 @@
 </head>
 
 <body>
-  <header>Awesomejini Portfolio</header>
+  <header>
+    <p>Awesomejini Portfolio</p>
+    <nav>
+      <ul>
+        <li data-menuanchor="section1"><a href="#section1">Intro</a></li>
+        <li data-menuanchor="section2"><a href="#section2">About</a></li>
+        <li data-menuanchor="section3"><a href="#section3">Works</a></li>
+        <li data-menuanchor="section4"><a href="#section4">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
   <div id="fullpage">
     <div class="section s1">
       <h1 style="color: #EE4E34;">Intro</h1>
       <p style="color: #EE4E34;">안녕하세요, 프론트엔드 개발자를 꿈꾸는 지니입니다.</p>
+      <div class="content">
+        <p style="color: #EE4E34;">웹디자이너로만 7년, 서당 🐕 1년 정도면! <br />이벤트 페이지 정도는 퍼블리싱 할 수 있게 됩니다.👏👏👏<br />디자인 경력 내 선임
+          디자이너, 선임
+          퍼블리셔 육아휴직🍼 이슈 발생! <br />대타 인력으로 1년 가량 업무 조정하여 일했습니다.</p>
+      </div>
     </div>
     <div class="section s2">
       <h1 style="color: #FCEDDA;">About</h1>
       <p style="color: #FCEDDA;">1990년생 말띠, 경기도 거주</p>
+      <div class="content">
+        <p style="color: #FCEDDA;">퍼블리싱을 하다보니<br /><strong>FE개발자분</strong>께 부탁 좀 그만🚫하고 싶었습니다.</p>
+      </div>
     </div>
     <div class="section s3">
       <h1 style="color: #234E70;">Works</h1>
       <p style="color: #234E70;">HTML / CSS / Vanilla JS + React.js + Vue.js 초급 / SCSS 초급 </p>
+      <div class="content">
+        <p style="color: #234E70;">😍<strong>JS</strong>가 좋아서 해석할 줄 알고 싶었습니다.<br />작동되면 짜릿하고 행복했습니다. <br />물론 좌절도 겪었습니다.
+          오타 등 꼼꼼히 챙겨야 할 부분들이 많았습니다.<br />갈 길이 멀지만 <strong>React.js</strong>와 <strong>Vue.js</strong>를 조금 다룰 줄 알게 되었습니다.
+        </p>
+      </div>
     </div>
     <div class="section s4">
       <h1 style="color: #FFE67C;">Contact</h1>
-      <p style="color: #FFE67C;">제작중입니다</p>
+      <p style="color: #FFE67C;"></p>
+      <div class="content">
+        <p style="color: #FFE67C;">이력서를 확인해주세요.</p>
+      </div>
     </div>
   </div>
 
@@ -39,89 +65,59 @@
     new fullpage('#fullpage', {
       //options here
       licenseKey: '',
+      anchors: ['section1', 'section2', 'section3', 'section4'],
       sectionsColor: ['#FCEDDA', '#EE4E34', '#FFE67C', '#234E70'],
       navigation: true,
       navigationTooltips: ['Intro', 'About Jini', 'Works', 'Contact'],
-      onLeave: function (origin, destination, direction) {
-        if (origin.index == 0 && direction == "down") {
-          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
-        }
-        if (origin.index == 1 && direction == "down") {
-          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
-        }
-        if (origin.index == 1 && direction == "up") {
-          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
+
+      afterLoad: function (origin, destination, direction) {
+        if (destination.index == 0) {
+          $('header, header nav ul li a').css('color', '#EE4E34').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
         }
-        if (origin.index == 2 && direction == "up") {
-          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        if (destination.index == 1) {
+          $('header, header nav ul li a').css('color', '#FCEDDA').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
         }
-        else if (origin.index == 2 && direction == "down") {
-          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+        if (destination.index == 2) {
+          $('header, header nav ul li a').css('color', '#234E70').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
         }
-        if (origin.index == 3 && direction == "up") {
-          $('header').css('color', '#234E70').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
-        }
-        else if (origin.index == 3 && direction == "down") {
-          $('header').css('color', '#FBF8BE').css('transition', '0.1s linear');
+        if (destination.index == 3) {
+          $('header, header nav ul li a').css('color', '#FBF8BE').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
         }
       },
-      afterLoad: function (origin, destination, direction) {
-        if (origin.index == 0 && direction == "up") {
-          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
+
+      onLeave: function (origin, destination, direction) {
+        if (destination.index == 0) {
+          $('header, header nav ul li a').css('color', '#EE4E34').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
         }
-        if (origin.index == 0 && direction == "down") {
-          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
+        if (destination.index == 1) {
+          $('header, header nav ul li a').css('color', '#FCEDDA').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
         }
-        if (origin.index == 1 && direction == "up") {
-          $('header').css('color', '#EE4E34').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
-        }
-        else if (origin.index == 1 && direction == "down") {
-          $('header').css('color', '#234E70').css('transition', '0.1s linear');
+        if (destination.index == 2) {
+          $('header, header nav ul li a').css('color', '#234E70').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
         }
-        if (origin.index == 2 && direction == "up") {
-          $('header').css('color', '#FCEDDA').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
-        }
-        else if (origin.index == 2 && direction == "down") {
-          $('header').css('color', '#FBF8BE').css('transition', '0.1s linear');
+        if (destination.index == 3) {
+          $('header, header nav ul li a').css('color', '#FBF8BE').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
-        }
-        if (origin.index == 3 && direction == "up") {
-          $('header').css('color', '#234E70').css('transition', '0.1s linear');
-          $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
-          $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
         }
       },
       scrollBar: true
     });
 
-    $('html').bind('mousewheel DOMMouseScroll', function (e) {
-
-    });
 
   </script>
 </body>

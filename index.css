@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
+ul, li {
+  list-style: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -12,9 +16,28 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-family: 'Marck Script', cursive;
   font-size: 2rem;
   padding: 2rem 3rem;
+}
+
+
+header p {
+  font-family: 'Marck Script', cursive;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #EE4E34;
 }
 
 #fp-nav ul li a span {
@@ -23,6 +46,9 @@ header {
 
 .section {
   padding: 0 3rem;
+  display: flex;
+  position: relative;
+  
 }
 
 .section h1 {
@@ -35,3 +61,13 @@ header {
   margin-left: 0.5rem;
   color: #EE4E34;
 }
+
+.section .content {
+  position: absolute;
+  top: 28rem;
+  left: 39rem;
+  padding-right: 10rem;
+  line-height: 170%;
+}
+
+
