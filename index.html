@@ -31,16 +31,21 @@
       <h1 style="color: #EE4E34;">Intro</h1>
       <p style="color: #EE4E34;">안녕하세요, 프론트엔드 개발자를 꿈꾸는 지니입니다.</p>
       <div class="content">
-        <p style="color: #EE4E34;">웹디자이너로만 7년, 서당 🐕 1년 정도면! <br />이벤트 페이지 정도는 퍼블리싱 할 수 있게 됩니다.👏👏👏<br />디자인 경력 내 선임
+
+        <p style="color: #EE4E34;">
+          웹디자이너로만 7년, 서당 🐕 1년 정도면! <br />이벤트 페이지 정도는 퍼블리싱 할 수 있게 됩니다.👏👏👏<br />디자인 경력 내 <br />선임
           디자이너, 선임
-          퍼블리셔 육아휴직🍼 이슈 발생! <br />대타 인력으로 1년 가량 업무 조정하여 일했습니다.</p>
+          퍼블리셔 육아휴직🍼 이슈 발생! <br />대타 인력으로 1년 가량 업무 조정하여 일했습니다.
+        </p>
       </div>
     </div>
     <div class="section s2">
       <h1 style="color: #FCEDDA;">About</h1>
       <p style="color: #FCEDDA;">1990년생 말띠, 경기도 거주</p>
       <div class="content">
-        <p style="color: #FCEDDA;">퍼블리싱을 하다보니<br /><strong>FE개발자분</strong>께 부탁 좀 그만🚫하고 싶었습니다.</p>
+        <p style="color: #FCEDDA;">퍼블리싱을 하다보니<br /><strong>FE개발자분</strong>께
+          부탁 좀 그만🚫하고 싶었습니다.<br /><iframe src="https://giphy.com/embed/SsjyaYH2gkNCE" width="170rem" height="auto"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe></p>
       </div>
     </div>
     <div class="section s3">
@@ -53,10 +58,17 @@
       </div>
     </div>
     <div class="section s4">
-      <h1 style="color: #FFE67C;">Contact</h1>
-      <p style="color: #FFE67C;"></p>
+      <h1 style="color: #FFE67C;">Contact</h1><br /><br />
+      <p style="color: #FFE67C;">
+        <a class="goBtn" href="https://drive.google.com/drive/u/0/folders/1MVLp4VaxTmkboRCNevNY9zzancycika2"
+          target="_blank">WebDesign & Publishing</a>
+        <a class="goBtn" href="https://github.com/awesomejini/ccoccotalk" target="_blank">React.js - ccoccotalk</a>
+        <a class="goBtn" href="https://github.com/awesomejini/awesomeVue" target="_blank">Vue.js (강의 수강)</a>
+        <a class="goBtn" href="https://awesomejini.tistory.com/" target="_blank">내용 많지 않은 블로그</a>
+      </p>
       <div class="content">
-        <p style="color: #FFE67C;">이력서를 확인해주세요.</p>
+        <p style="color: #FFE67C;">이력서를 확인해주세요.
+        </p>
       </div>
     </div>
   </div>
@@ -75,21 +87,29 @@
           $('header, header nav ul li a').css('color', '#EE4E34').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
+          $('.s1 h1').css('fontSize', '11rem').css('transition', '1s linear');
+          $('.s1 p, .s1 iframe').css('opacity', '1').css('transition', '1s linear');
         }
         if (destination.index == 1) {
           $('header, header nav ul li a').css('color', '#FCEDDA').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('.s2 h1').css('fontSize', '11rem').css('transition', '1s linear');
+          $('.s2 p, .s2 iframe').css('opacity', '1').css('transition', '1s linear');
         }
         if (destination.index == 2) {
           $('header, header nav ul li a').css('color', '#234E70').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+          $('.s3 h1').css('fontSize', '11rem').css('transition', '1s linear');
+          $('.s3 p, .s3 iframe').css('opacity', '1').css('transition', '1s linear');
         }
         if (destination.index == 3) {
           $('header, header nav ul li a').css('color', '#FBF8BE').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
+          $('.s4 h1').css('fontSize', '11rem').css('transition', '1s linear');
+          $('.s4 p, .s4 iframe').css('opacity', '1').css('transition', '1s linear');
         }
       },
 
@@ -98,21 +118,29 @@
           $('header, header nav ul li a').css('color', '#EE4E34').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#EE4E34').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#EE4E34').css('transition', '0.1s linear');
+          $('.s1 h1').css('fontSize', '10rem').css('transition', '1s linear');
+          $('.s1 p, .s1 iframe').css('opacity', '0').css('transition', '0.1s linear');
         }
         if (destination.index == 1) {
           $('header, header nav ul li a').css('color', '#FCEDDA').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FCEDDA').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FCEDDA').css('transition', '0.1s linear');
+          $('.s2 h1').css('fontSize', '10rem').css('transition', '1s linear');
+          $('.s2 p, .s2 iframe').css('opacity', '0').css('transition', '0.1s linear');
         }
         if (destination.index == 2) {
           $('header, header nav ul li a').css('color', '#234E70').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#234E70').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#234E70').css('transition', '0.1s linear');
+          $('.s3 h1').css('fontSize', '10rem').css('transition', '1s linear');
+          $('.s3 p, .s3 iframe').css('opacity', '0').css('transition', '0.1s linear');
         }
         if (destination.index == 3) {
           $('header, header nav ul li a').css('color', '#FBF8BE').css('transition', '0.1s linear');
           $('#fp-nav ul li a span').css('backgroundColor', '#FBF8BE').css('transition', '0.1s linear');
           $('.fp-tooltip').css('color', '#FBF8BE').css('transition', '0.1s linear');
+          $('.s4 h1').css('fontSize', '10rem').css('transition', '1s linear');
+          $('.s4 p, .s4 iframe').css('opacity', '0').css('transition', '0.1s linear');
         }
       },
       scrollBar: true
